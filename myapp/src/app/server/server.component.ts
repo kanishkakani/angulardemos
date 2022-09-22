@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-server',
@@ -12,7 +13,7 @@ export class ServerComponent implements OnInit {
   allowNewServer = true;
 
 
-  constructor() { }
+  constructor(private router: Router, private currentRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,9 @@ export class ServerComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreationStatus = 'Server was created';
+  }
+  gotoAccounts() {
+    this.router.navigate(['accounts'], { relativeTo: this.currentRoute });
   }
 
 }
