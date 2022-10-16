@@ -24,6 +24,7 @@ import { UserComponent } from './users/user/user.component';
 import { UserviewComponent } from './users/userview/userview.component';
 import { PostsComponent } from './posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -63,6 +64,7 @@ const appRoutes: Routes = [
     UserComponent,
     UserviewComponent,
     PostsComponent,
+    AdminLoginComponent,
   ],
   imports: [
     BrowserModule ,FormsModule,  RouterModule.forRoot(appRoutes),  ReactiveFormsModule,  HttpClientModule,],

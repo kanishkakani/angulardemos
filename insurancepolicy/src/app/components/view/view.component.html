@@ -1,0 +1,31 @@
+<!-- <p>view works!</p> -->
+<h2>Manage Users</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Email Id</th>
+      <th>Mobile NO</th>
+      <th>policy</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.Name }}</td>
+      <td>{{ user.address }}</td>
+      <td>{{ user.emailId }}</td>
+      <td>{{ user.mobileNo }}</td>
+      <td>{{ user.policy }}</td>
+      <td>
+        <button (click)="ApprovePolicy(user.id)" class="btn btn-success">
+          Approve
+        </button>
+        <button (click)="DisApprovePolicy(user.id)" class="btn btn-danger">
+          DisApprove
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
