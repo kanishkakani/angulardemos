@@ -25,6 +25,7 @@ import { UserviewComponent } from './users/userview/userview.component';
 import { PostsComponent } from './posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { ViewComponent } from './view/view.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -40,6 +41,8 @@ const appRoutes: Routes = [
   { path: 'users/:id/:name', component: UserviewComponent },
   { path: 'posts', component: PostsComponent },
   { path: 'posts', component: PostsComponent },
+  { path: 'admin-login', component: AdminLoginComponent},
+  { path: 'view', component: ViewComponent}
 ];
 
 @NgModule({
@@ -65,6 +68,7 @@ const appRoutes: Routes = [
     UserviewComponent,
     PostsComponent,
     AdminLoginComponent,
+    ViewComponent,
   ],
   imports: [
     BrowserModule ,FormsModule,  RouterModule.forRoot(appRoutes),  ReactiveFormsModule,  HttpClientModule,],

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-admin-login',
   templateUrl: './admin-login.component.html',
@@ -7,18 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminLoginComponent implements OnInit {
 
-  username:string;
-  password:string;
-  constructor() { }
+  public loginForm!: FormGroup;
+ 
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private route: Router) { }
 
   ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      email:['', [Validators.required, Validators.email]],
+      password:['', Validators.required]
+    })
   }
-  LoginAdmin()
-  {
-    if(this.username=="admin" && this.password=="1234")
-    {
-      console.log("Welcome");
-    }
+  onSubmit(){
+    this.login();
   }
-
+  login() {
+    throw new Error('Method not implemented.');
+  }
 }

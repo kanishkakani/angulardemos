@@ -7,7 +7,7 @@ import { ViewComponent } from './components/view/view.component';
 
 const routes: Routes = [
   {path: 'adminlogin', component: AdminloginComponent},
-  {path: 'view', component: ViewComponent}
+  {path: 'view', component: ViewComponent},
 
 ];
 

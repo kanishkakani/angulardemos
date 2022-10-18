@@ -7,13 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewComponent implements OnInit {
 
-  //  users: User[] = [];
-
-  constructor(
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    // this.users = this.usersService.getUsers();
   }
 
-  }
+}
